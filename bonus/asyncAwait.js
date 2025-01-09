@@ -1,7 +1,7 @@
 function waitASecond() {
+  console.log('Waiting 3 seconds')
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log('Waiting 3 seconds')
       resolve()
     }, 3000)
   })
@@ -14,3 +14,5 @@ async function run() {
 }
 
 run()
+
+const idan = async () => await click()
