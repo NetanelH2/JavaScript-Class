@@ -1,23 +1,23 @@
 // 1.
 const person = {
-  firstName: 'Pinhas',
-  lastName: 'Cohen',
-  age: 22,
-  gender: 'male',
-  currentOccupation: 'Insurance Signature',
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 25,
+  gender: 'Male',
+  currentOccupation: 'Student',
   schoolYears: 12,
 }
 
-console.log(person)
+console.log('\nPerson Details:\n', person)
 
 // 2.
-person.hairColor = 'Orange'
+person.hairColor = 'Black'
 person.eyeColor = 'Green'
 
-console.log(person)
+console.log('\nAdding New Properties:\n', person)
 
 // 3.
 person.age = 29
 person.eyeColor = 'Brown'
 
-console.log(person)
+console.log('\nChanging Existing Properties:\n', person)

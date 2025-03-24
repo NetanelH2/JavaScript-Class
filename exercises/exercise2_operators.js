@@ -1,24 +1,29 @@
 // 1.
-let rectangle_1 = 10 * 20
-console.log('The Area of the first rectangle is: ' + rectangle_1)
+const length1 = 10
+const width1 = 20
+const area1 = length1 * width1
+console.log('Area of the first rectangle:', area1, 'cm²')
 
 // 2.
-let rectangle_2 = 15 * 30
-console.log('The Area of the second rectangle is: ' + rectangle_2)
+const length2 = 15
+const width2 = 30
+const area2 = length2 * width2
+console.log('Area of the second rectangle:', area2, 'cm²')
 
-let result =
-  rectangle_1 === rectangle_2
-    ? 'Both of the rectangles are equal in area'
-    : 'The rectangles are not equal in area'
+// 3.
+const isFirstLarger = area1 > area2
+const isSecondLarger = area2 > area1
+const areEqual = area1 === area2
 
-console.log(result)
+console.log(
+  isFirstLarger
+    ? `The first rectangle (${area1} cm²) is larger than the second rectangle (${area2} cm²)`
+    : isSecondLarger
+    ? `The second rectangle (${area2} cm²) is larger than the first rectangle (${area1} cm²)`
+    : `Both rectangles have equal area (${area1} cm²)`,
+)
 
-// 3. Pinhas Exercise
-const pinhasYear = 1992
-const idanYear = 1988
-
-// אם פינחס גדול מעידן תדפיס לי שגיאה
-// אם פינחס קטן מעידן תדפיס לי הכל בסדר
-
-let result2 = pinhasYear > idanYear ? 'Error' : 'OK'
-console.log(result2)
+// 4.
+const name = 'John Doe'
+const age = 25
+console.log(`Hello, my name is ${name} and I am ${age} years old.`)

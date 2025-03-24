@@ -1,78 +1,120 @@
 // 1.
-function checkNumber(number) {
-  if (number > 0) {
-    console.log(number, 'is a positive number')
-  }
-  if (number < 0) {
-    console.log(number, 'is a negative number')
-  }
-  if (number === 0) {
-    console.log(number, 'is zero')
+function checkNumber(num) {
+  if (num > 0) {
+    console.log(`The number ${num} is positive.`)
+  } else if (num < 0) {
+    console.log(`The number ${num} is negative.`)
+  } else {
+    console.log(`The number is zero.`)
   }
 }
 
-checkNumber(1)
-checkNumber(-1)
+checkNumber(5)
+checkNumber(-3)
 checkNumber(0)
+console.log('\n')
+
+// 2.
+const person = {
+  firstName: 'John',
+  lastName: 'Cohen',
+  age: 25,
+}
+
+if (person.age >= 18) {
+  console.log(
+    `${person.firstName} ${person.lastName} is an adult (${person.age} years old).`,
+  )
+} else {
+  console.log(
+    `${person.firstName} ${person.lastName} is a minor (${person.age} years old).`,
+  )
+}
+console.log('\n')
 
 // 3.
-// A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: Below 60.
-const student1 = {firstName: 'John', lastName: 'Smith', class: '12A', grade: 95}
-const student2 = {
-  firstName: 'Emma',
-  lastName: 'Johnson',
-  class: '12A',
-  grade: 82,
-}
-const student3 = {
-  firstName: 'Michael',
-  lastName: 'Brown',
-  class: '12B',
-  grade: 75,
-}
-const student4 = {
-  firstName: 'Sarah',
-  lastName: 'Davis',
-  class: '12B',
-  grade: 68,
-}
-const student5 = {
-  firstName: 'David',
-  lastName: 'Wilson',
-  class: '12A',
-  grade: 55,
-}
-function checkGrade(grade) {
+const students = [
+  {firstName: 'Danny', lastName: 'Levi', className: '12th-2', score: 95},
+  {firstName: 'Shira', lastName: 'Cohen', className: '11th-1', score: 82},
+  {firstName: 'Alon', lastName: 'Israeli', className: '12th-3', score: 75},
+  {firstName: 'Michal', lastName: 'Abraham', className: '11th-2', score: 68},
+  {firstName: 'Omer', lastName: 'Shemesh', className: '12th-1', score: 55},
+]
+
+function getGradeCategory(score) {
   switch (true) {
-    case grade >= 90 && grade <= 100:
+    case score >= 90 && score <= 100:
       return 'A'
-    case grade >= 80 && grade <= 89:
+    case score >= 80 && score <= 89:
       return 'B'
-    case grade >= 70 && grade <= 79:
+    case score >= 70 && score <= 79:
       return 'C'
-    case grade >= 60 && grade <= 69:
+    case score >= 60 && score <= 69:
       return 'D'
-    case grade >= 0 && grade < 60:
-      return 'F'
     default:
-      return 'Invalid grade'
+      return 'F'
   }
 }
 
-console.log(student1.firstName, 'Got grade:', checkGrade(student1.grade))
-console.log(student2.firstName, 'Got grade:', checkGrade(student2.grade))
-console.log(student3.firstName, 'Got grade:', checkGrade(student3.grade))
-console.log(student4.firstName, 'Got grade:', checkGrade(student4.grade))
-console.log(student5.firstName, 'Got grade:', checkGrade(student5.grade))
+console.log(
+  `${students[0].firstName} ${students[0].lastName}, Class: ${
+    students[0].className
+  }, Score: ${students[0].score}, Category: ${getGradeCategory(
+    students[0].score,
+  )}`,
+)
+
+console.log(
+  `${students[1].firstName} ${students[1].lastName}, Class: ${
+    students[1].className
+  }, Score: ${students[1].score}, Category: ${getGradeCategory(
+    students[1].score,
+  )}`,
+)
+
+console.log(
+  `${students[2].firstName} ${students[2].lastName}, Class: ${
+    students[2].className
+  }, Score: ${students[2].score}, Category: ${getGradeCategory(
+    students[2].score,
+  )}`,
+)
+
+console.log(
+  `${students[3].firstName} ${students[3].lastName}, Class: ${
+    students[3].className
+  }, Score: ${students[3].score}, Category: ${getGradeCategory(
+    students[3].score,
+  )}`,
+)
+
+console.log(
+  `${students[4].firstName} ${students[4].lastName}, Class: ${
+    students[4].className
+  }, Score: ${students[4].score}, Category: ${getGradeCategory(
+    students[4].score,
+  )}`,
+)
+
+console.log('\n')
 
 // 4.
-function checkLeapYear(year) {
+function isLeapYear(year) {
   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-    console.log(year, 'is a leap year')
+    return true
   } else {
-    console.log(year, 'is not a leap year')
+    return false
   }
 }
-checkLeapYear(2024)
-checkLeapYear(1900)
-checkLeapYear(2000)
+
+if (isLeapYear(2000)) {
+  console.log(`${2000} is a leap year.`)
+} else {
+  console.log(`${2000} is not a leap year.`)
+}
+
+if (isLeapYear(2021)) {
+  console.log(`${2021} is a leap year.`)
+} else {
+  console.log(`${2021} is not a leap year.`)
+}

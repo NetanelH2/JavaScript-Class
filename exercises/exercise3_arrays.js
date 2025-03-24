@@ -1,14 +1,21 @@
+const favoriteFruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Orange']
+
 // 1.
-let fruits = ['Apple', 'Banana', 'Watermelon']
-let myFruit = fruits[2]
-console.log(fruits)
-console.log(myFruit)
+const thirdFruit = favoriteFruits[2]
+
+console.log('My favorite fruits:', favoriteFruits)
+console.log('My third favorite fruit:', thirdFruit)
+
+console.log('Number of favorite fruits:', favoriteFruits.length)
 
 // 2.
-console.log(fruits.length)
+console.log('\nModifying the array:')
+console.log('Original array:', favoriteFruits)
 
-// 3.
-fruits.push('Strawberry')
-console.log(fruits)
-fruits.pop()
-console.log(fruits)
+favoriteFruits.push('Watermelon')
+console.log('After adding Watermelon:', favoriteFruits)
+
+const removedFruit = favoriteFruits.pop()
+console.log('After removing Watermelon', favoriteFruits)
+
+console.log('\nFinal list of favorite fruits:', favoriteFruits)
